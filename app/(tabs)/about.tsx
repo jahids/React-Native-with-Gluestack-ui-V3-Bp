@@ -2,6 +2,8 @@ import { ErrorState } from '@/components/error-state';
 import { LoadingState } from '@/components/loading-state';
 import { PostList } from '@/components/post-list';
 import { Box } from '@/components/ui/box';
+import { Fab, FabIcon } from '@/components/ui/fab';
+import { AddIcon } from '@/components/ui/icon';
 import { Text } from '@/components/ui/text';
 import { usePosts } from '@/hooks/use-posts';
 
@@ -43,6 +45,18 @@ export default function AboutScreen() {
 
   return (
     <Box className="flex-1 bg-background-0">
+      {/* console click on fab */}
+      <Fab
+      className='rounded-full bg-red-500'
+          size="md"
+        placement="bottom right"
+        isHovered={false}
+        isDisabled={false}
+        isPressed={true}
+        onPress={() => console.log('clicked')}
+      >
+        <FabIcon as={AddIcon} />
+      </Fab>
         <Box className="p-4">
           <Text className="text-typography-900 text-xl font-semibold mb-1">
             Posts from JSONPlaceholder

@@ -138,3 +138,4 @@ The About page demonstrates:
 
 See `app/(tabs)/about.tsx` for the complete implementation.
 
+

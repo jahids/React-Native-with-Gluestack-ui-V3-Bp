@@ -40,3 +40,4 @@ export const tabsConfig: TabConfig[] = [
 - ✅ No header (headerShown: false)
 - ✅ Clean, maintainable code
 
+

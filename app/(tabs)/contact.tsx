@@ -1,4 +1,17 @@
 import { Box } from '@/components/ui/box';
+import { ChevronDownIcon } from '@/components/ui/icon';
+import {
+  Select,
+  SelectBackdrop,
+  SelectContent,
+  SelectDragIndicator,
+  SelectDragIndicatorWrapper,
+  SelectIcon,
+  SelectInput,
+  SelectItem,
+  SelectPortal,
+  SelectTrigger,
+} from '@/components/ui/select';
 import { Text } from '@/components/ui/text';
 import { ScrollView } from 'react-native';
 
@@ -29,6 +42,30 @@ export default function ContactScreen() {
                 +1 (555) 123-4567
               </Text>
             </Box>
+
+            <Select>
+      <SelectTrigger variant="outline" size="xl" className='flex justify-between'>
+        <SelectInput placeholder="Select option" />
+        <SelectIcon className="mr-6" as={ChevronDownIcon} />
+      </SelectTrigger>
+      <SelectPortal>
+        <SelectBackdrop />
+        <SelectContent>
+          <SelectDragIndicatorWrapper>
+            <SelectDragIndicator />
+          </SelectDragIndicatorWrapper>
+          <SelectItem label="UX Research" value="ux" />
+          <SelectItem label="Web Development" value="web" />
+          <SelectItem
+            label="Cross Platform Development Process"
+            value="Cross Platform Development Process"
+          />
+          <SelectItem label="UI Designing" value="ui" isDisabled={true} />
+          <SelectItem label="Backend Development" value="backend" />
+        </SelectContent>
+      </SelectPortal>
+    </Select>
+
           </Box>
         </ScrollView>
     </Box>

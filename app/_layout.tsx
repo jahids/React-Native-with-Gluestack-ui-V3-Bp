@@ -3,6 +3,7 @@ import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 import '@/global.css';
 import { useThemeStore } from '@/store/theme-store';
 import { Stack } from 'expo-router';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function RootLayout() {
   const { mode } = useThemeStore();
@@ -12,13 +13,15 @@ export default function RootLayout() {
 
   return (
     <QueryProvider>
-      <GluestackUIProvider mode={themeMode}>
-        <Stack
-          screenOptions={{
-            headerShown: false,
-          }}
-        />
-      </GluestackUIProvider>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <GluestackUIProvider mode={themeMode}>
+          <Stack
+            screenOptions={{
+              headerShown: false,
+            }}
+          />
+        </GluestackUIProvider>
+      </GestureHandlerRootView>
     </QueryProvider>
   );
 }
