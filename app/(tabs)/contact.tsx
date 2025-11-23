@@ -1,12 +1,10 @@
 import { Box } from '@/components/ui/box';
 import { Text } from '@/components/ui/text';
 import { ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function ContactScreen() {
   return (
     <Box className="flex-1 bg-background-0">
-      <SafeAreaView edges={['top']} className="flex-1">
         <ScrollView className="flex-1">
           <Box className="p-4">
             <Text className="text-typography-900 text-xl mb-4">
@@ -33,7 +31,6 @@ export default function ContactScreen() {
             </Box>
           </Box>
         </ScrollView>
-      </SafeAreaView>
     </Box>
   );
 }

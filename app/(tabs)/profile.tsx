@@ -31,6 +31,8 @@ export default function ProfileScreen() {
               </Button>
             </Box>
           </Box>
+
+
         </ScrollView>
 
     </Box>

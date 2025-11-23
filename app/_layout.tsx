@@ -1,3 +1,4 @@
+import { QueryProvider } from '@/components/query-provider';
 import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 import '@/global.css';
 import { useThemeStore } from '@/store/theme-store';
@@ -10,12 +11,14 @@ export default function RootLayout() {
   const themeMode = mode === 'system' ? 'light' : mode;
 
   return (
-    <GluestackUIProvider mode={themeMode}>
-      <Stack
-        screenOptions={{
-          headerShown: false,
-        }}
-      />
-    </GluestackUIProvider>
+    <QueryProvider>
+      <GluestackUIProvider mode={themeMode}>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+          }}
+        />
+      </GluestackUIProvider>
+    </QueryProvider>
   );
 }
