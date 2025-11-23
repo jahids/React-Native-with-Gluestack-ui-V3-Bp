@@ -1,10 +1,21 @@
-import { Stack } from "expo-router";
-
 import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 import '@/global.css';
+import { useThemeStore } from '@/store/theme-store';
+import { Stack } from 'expo-router';
 
 export default function RootLayout() {
-  return <GluestackUIProvider>
-    <Stack />
-    </GluestackUIProvider>;
+  const { mode } = useThemeStore();
+  
+  // Convert 'system' to 'light' or 'dark' based on device preference
+  const themeMode = mode === 'system' ? 'light' : mode;
+
+  return (
+    <GluestackUIProvider mode={themeMode}>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      />
+    </GluestackUIProvider>
+  );
 }

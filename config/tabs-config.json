@@ -1,0 +1,35 @@
+[
+  {
+    "name": "index",
+    "route": "/(tabs)",
+    "title": "Home",
+    "icon": "HomeIcon",
+    "focusedColor": "text-typography-900",
+    "unfocusedColor": "text-typography-500"
+  },
+  {
+    "name": "contact",
+    "route": "/(tabs)/contact",
+    "title": "Contact",
+    "icon": "PhoneIcon",
+    "focusedColor": "text-typography-900",
+    "unfocusedColor": "text-typography-500"
+  },
+  {
+    "name": "about",
+    "route": "/(tabs)/about",
+    "title": "About",
+    "icon": "InfoIcon",
+    "focusedColor": "text-typography-900",
+    "unfocusedColor": "text-typography-500"
+  },
+  {
+    "name": "profile",
+    "route": "/(tabs)/profile",
+    "title": "Profile",
+    "icon": "UserIcon",
+    "focusedColor": "text-typography-900",
+    "unfocusedColor": "text-typography-500"
+  }
+]
+
